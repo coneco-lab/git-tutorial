@@ -1,1 +1,1 @@
-now this text file has some content
+now this text file has some modified content, with a deletion (the old sentence) and an addition (the current sentence)
