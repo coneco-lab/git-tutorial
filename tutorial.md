@@ -41,7 +41,7 @@ The alternative to logbooks and multiplication is to work on a single file and k
 
 The name Git is often found in conjunction with GitHub.
 
-> **GitHub is two things:** first, a web service that relies on Git to make multiple users collaborate on the same project while keeping track of everyone's actions. Second, a platform for sharing code and the associated version history with the general public
+> **GitHub is two things:** first, a web service that relies on Git to make multiple users collaborate on the same project while keeping track of everyone's actions, and second, a platform for sharing code and the associated version history with the general public
 
 ## :pushpin: Core Concepts
 A deep understanding of Git and GitHub can require months of training, but a few minutes of focus are enough to acquire a working knowledge. In particular, a basic use of Git and GitHub relies entirely on 5 simple concepts: _repository_, _tracking_, _commit_, _remote_, and _push_. Once these five concepts are understood, one can add three more (_forks_, _clones_ and _pull request_) to start working collaboratively and unlock a world of possibilities.
