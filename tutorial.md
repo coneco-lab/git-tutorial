@@ -60,7 +60,7 @@ git init					        # initialise a Git repository inside it
 ```
 The video below shows the code in action:
 
-![git-init](https://github.com/coneco-lab/git-tutorial/blob/main/files/git-init.webm)
+![git-init](https://drive.google.com/file/d/1uHygH-k0oi05tm-M78lJcXcL08AigizB/view?usp=drive_link)
 
 ### :pushpin: Core Concept 2: Tracking
 Transforming a directory into a repository does not imply that the VCS will keep track of all its contents: while it can see all the files in the repository, the VCS does not necessarily watch all all of them to record their modifications. In fact, the system only watches the files that have been explicitly added to a tracking list by the owner of the repository. 
