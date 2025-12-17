@@ -2,15 +2,16 @@
 
 This repository contains an introductory tutorial for the version control system Git and its companion web service GitHub. 
 
-The target audience are absolute beginners that want to get started with version control to serve basic scientific purposes. .
+The target audience are absolute beginners that want to get started with version control to serve basic scientific purposes.
 
 ## Repository structure
 
 ```bash
 root/
+├── files/                     # supplementary files for the tutorial (e.g., images and videos)
 ├── LICENSE                    # a copy of the license that applies to this repository
-├── files/                     # supplementary files (e.g., images and videos)
 ├── README.md                  # the file you are reading, the information you need
+├── file.txt                   # a dummy file used in the tutorial 
 └── tutorial.md                # the actual tutorial
 ```
 
