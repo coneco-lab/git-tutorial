@@ -60,7 +60,7 @@ git init					        # initialise a Git repository inside it
 ```
 The video below shows the code in action:
 
-[git-init.webm](https://github.com/user-attachments/assets/f2b59f27-596d-4280-bf15-1d8b5630850d)
+[Initializing a Git repository](https://github.com/user-attachments/assets/f2b59f27-596d-4280-bf15-1d8b5630850d)
 
 ### :pushpin: Core Concept 2: Tracking
 Transforming a directory into a repository does not imply that the VCS will keep track of all its contents: while it can see all the files in the repository, the VCS does not necessarily watch all all of them to record their modifications. In fact, the system only watches the files that have been explicitly added to a tracking list by the owner of the repository. 
@@ -86,7 +86,7 @@ It is worth noting that committing to a modification does not mean that the file
 
 The video below shows the previous steps in action. First, a file is created with using the Linux command `touch` (you can create the file manually if you do not use a Linux computer). Subsequently, calling `git status` shows that the file exists but is not inside the tracking list. Therefore, the file is added to the tracking list using `git add` and finally, the creation of that file is committed with a corresponding message.
 
-![](./files/git-status-add-commit.webm)
+[Print Git status, add to tracking list and commit](https://github.com/user-attachments/assets/b7c1ce30-e638-44db-adb6-72b630f57b7c)
 
 ### :pushpin: Core Concept 4: Remote
 As described above, a repository is a directory whose contents can be tracked by a VCS. This directory is located inside your own computer, as is the VCS: in other words, the repository is _local_. 
@@ -113,7 +113,8 @@ git remote add origin https://github.com/coneco-lab/git-tutorial.git
 
 The video below shows all the steps described in this section, from creating a remote repository on GitHub to coupling it with a local.
 
-![](./files/git-create-and-add-remote.webm)
+[Creating and adding a GitHub remote](https://github.com/user-attachments/assets/13f7c3fb-f347-4e6f-9c6c-90baddce20ff)
+
 
 ### :pushpin: Core Concept 5: Push
 Imagine you have a local repository that is coupled to a remote. You have been working on some file in your local and you have finally reached a satisfactory result. Therefore, you commit to your changes and you decide to update the remote. This will change the outdated file on the remote with the updated file from the local, while keeping an explicit trace of the changes that you have made. 
@@ -130,7 +131,7 @@ This command means that the `git` VCS should `push` (that is, upload) your chang
 
 The following video demonstrates a simple push to the remote's main. 
 
-![](./files/git-push.webm)
+[Pushing to a remote](https://github.com/user-attachments/assets/1f5da25a-473a-4b1c-b966-8a0e5fa43060)
 
 As you can see, pushing to GitHub requires to insert your username (which you choose when you create your account) and a password (which is not shown in the terminal for privacy). 
 
@@ -169,7 +170,7 @@ Forking creates a copy of a GitHub repository that was created by another user. 
 
 The video below demonstrates forking MNE's GitHub repository into my own user account:
 
-![github-fork](./files/github-fork.webm)
+[Forking a GitHub remote](https://github.com/user-attachments/assets/71d137fb-91c2-4776-8873-9fb93c7977ce)
 
 ### :couple: Collaborating 2: Clones
 Creating a fork on GitHub is not enough to start working on it: to do so, you need to pair it with a local. 
@@ -184,7 +185,7 @@ The following video demonstrates cloning MNE-Python's GitHub repository into a l
 
 > Note 2: if you clone a repository that contains something that can be installed (like MNE-Python), you are not actually performing the installation: you are merely creating a local copy of the installable code 
 
-![clone](./files/git-clone.webm)
+[Cloning a remote](https://github.com/user-attachments/assets/32b0ceea-db2f-4e06-9f4f-de335327f940)
 
 ### :couple: Collaborating 3: Syncing Forks and Pull Requests
 By default, any change applied to the upstream does not affect its forks. However, GitHub constantly keeps track of all the changes made to the upstream and its forks, compares their version histories to see if they align, and warns users if they do not. For example, changes in the upstream are signalled  by a message that appears on top of any fork and says `This branch is <number> commits behind <name of the upstream>`. This is shown in the screenshot below,, where my fork of MNE-Python is 1 commit behind of the upstream, which is `mne-tools/mne-python:main` (that is, the `main` branch of repository `mne-python` by user `mne-tools`):
