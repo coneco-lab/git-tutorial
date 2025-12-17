@@ -65,7 +65,7 @@ The video below shows the code in action:
 ### :pushpin: Core Concept 2: Tracking
 Transforming a directory into a repository does not imply that the VCS will keep track of all its contents: while it can see all the files in the repository, the VCS does not necessarily watch all all of them to record their modifications. In fact, the system only watches the files that have been explicitly added to a tracking list by the owner of the repository. 
 
-To know which files are subject to tracking at any given time, you can use the command `git status` from within you repository. This will print a list of all the files in the directory (including subdirectories), specifying which ones are being tracked and which are not. 
+To know which files are subject to tracking at any given time, you can use the command `git status` from within your repository. This will print a list of all the files in the directory (including subdirectories), specifying which ones are being tracked and which are not. 
 
 In a newly created repository, no file is being tracked. To start tracking a file of interest, you use command `git add <filename>`. This will add the file to the tracking list and Git will start recording the changes that you make. 
 
@@ -82,7 +82,7 @@ git commit file.txt -m "create file.txt"
 
 Note that by convention, commit messages are usually written in imperative style: _create_, not _created_; _add_, not _added_; _do_, not _done_; _modify_, not _modified_... etc.
 
-It is worth noting that committing to a modification does not mean that the file cannot be modified any further: it simply means that the VCS will forever record the state of the file at the time of the commit, with a commit message to briefly describe such state and an open possibility to restore it in the future (which will not be treated here).
+It is worth noting that committing to a modification does not mean that the file cannot be modified any further: it simply means that the VCS will forever record the state of the file at the time of the commit, with a commit message to briefly describe such state and an open possibility to restore it in the future.
 
 The video below shows the previous steps in action. First, a file is created with using the Linux command `touch` (you can create the file manually if you do not use a Linux computer). Subsequently, calling `git status` shows that the file exists but is not inside the tracking list. Therefore, the file is added to the tracking list using `git add` and finally, the creation of that file is committed with a corresponding message.
 
@@ -99,11 +99,11 @@ Adding a remote to a local repository is as simple as:
 git remote add origin <remote url>
 ```
 
-Clearly, remotes cannot be added if they do not exist. To create a remote on GitHub, you can create a GitHub account and, once you are logged in, click on the `+` sign on the top-right side of any page. Once you have done that, you can click on `New repository` as in the screenshot below, then follow the instructions on screen. 
+Clearly, a remote cannot be added to a local if it does not exist. To this end, you can create a GitHub account and, once you are logged in, click on the `+` sign on the top-right side of any page. Once you have done that, you can click on `New repository` as in the screenshot below, then follow the instructions on screen to create a new remote.
 
 ![create-new-repo](./files/create-new-repo.png)
 
-Each newly created remote is assigned a URL with the structure `https://github.com/username/repository.git`, which can be copied and used to couple it with a local repository.
+Each newly created remote is assigned a URL with the structure `https://github.com/username/repository.git`, which can be copied and pasted in the command to pair a local with the remote.
 
 For example, creating a repository named `git-tutorial` under user `coneco-lab` would result in the URL `https://github.com/coneco-lab/git-tutorial.git`. With this URL, the command to add a remote looks like the following:
 
@@ -117,7 +117,7 @@ The video below shows all the steps described in this section, from creating a r
 
 
 ### :pushpin: Core Concept 5: Push
-Imagine you have a local repository that is coupled to a remote. You have been working on some file in your local and you have finally reached a satisfactory result. Therefore, you commit to your changes and you decide to update the remote. This will change the outdated file on the remote with the updated file from the local, while keeping an explicit trace of the changes that you have made. 
+Imagine you have a local repository that is paired with a remote. You have been working on some file in your local and you have finally reached a satisfactory result. Therefore, you commit to your changes and you decide to update the remote. This will change the outdated file on the remote with the updated file from the local, while keeping an explicit trace of the changes that you have made. 
 
 In VCS jargon, updating a remote with newly committed changes is known as _pushing_ your changes to the remote. Pushing a change to a remote is as simple as:
 
@@ -150,7 +150,7 @@ Beside the list of files with the latest commits and push times, the panel conta
 
 The first piece of information concerns the latest commit, which was pushed by user `matteo-d-m` (in this case, the owner of the repository) with the commit message `update README.md`. Git assigned the commit a unique identifier (visible on the right side of the strip), which is `8421a5c` and can be used to revert subsequent file versions to the present state. 
 
-The second piece of information is right next to the commit's identifier, and it is the total number of commits that were pushed to the remote (in this case, 50). Clicking on it opens a list of all commits with the corresponding message and unique identifiers, as follows: 
+The second piece of information is right next to the commit's identifier, and it is the total number of commits that were pushed to the remote (in this case, 50). Clicking on it opens a list of all commits with the corresponding messages and unique identifiers, as follows: 
 
 ![commit-history](./files/image-2.png)
 
@@ -159,6 +159,8 @@ Each item of this list can be inspected closely by clicking on it. This will ope
 ![commit-contents](./files/image-3.png)
 
 Here lies the power of Git and GitHub: Git keeps track of all changes, line by line, and assigns them a unique identifier once you decide to commit. Downstream, GitHub keeps a back-up of all those changes in the cloud, preserving them in case you lose access to your local and making them available to the general public if you want to. 
+
+---
 
 ## :couple: Collaboration Tools
 ### :couple: Collaborating 1: Forks
@@ -188,7 +190,7 @@ The following video demonstrates cloning MNE-Python's GitHub repository into a l
 [Cloning a remote](https://github.com/user-attachments/assets/32b0ceea-db2f-4e06-9f4f-de335327f940)
 
 ### :couple: Collaborating 3: Syncing Forks and Pull Requests
-By default, any change applied to the upstream does not affect its forks. However, GitHub constantly keeps track of all the changes made to the upstream and its forks, compares their version histories to see if they align, and warns users if they do not. For example, changes in the upstream are signalled  by a message that appears on top of any fork and says `This branch is <number> commits behind <name of the upstream>`. This is shown in the screenshot below,, where my fork of MNE-Python is 1 commit behind of the upstream, which is `mne-tools/mne-python:main` (that is, the `main` branch of repository `mne-python` by user `mne-tools`):
+By default, any change applied to the upstream does not affect its forks. However, GitHub constantly keeps track of all the changes made to the upstream and its forks, compares their version histories to see if they align, and warns users if they do not. For example, changes in the upstream are signalled  by a message that appears on top of any fork and says `This branch is <number> commits behind <name of the upstream>`. This is shown in the screenshot below, where my fork of MNE-Python is 1 commit behind of upstream `mne-tools/mne-python:main` (that is, the `main` branch of repository `mne-python` by user `mne-tools`):
 
 ![sync-fork](./files/github-sync-fork.png)
 
