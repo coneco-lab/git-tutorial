@@ -8,6 +8,7 @@ The target audience are absolute beginners that want to get started with version
 
 ```bash
 root/
+├── LICENSE                    # a copy of the license that applies to this repository
 ├── files/                     # supplementary files (e.g., images and videos)
 ├── README.md                  # the file you are reading, the information you need
 └── tutorial.md                # the actual tutorial
