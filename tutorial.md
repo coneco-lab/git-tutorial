@@ -84,7 +84,7 @@ Note that by convention, commit messages are usually written in imperative style
 
 It is worth noting that committing to a modification does not mean that the file cannot be modified any further: it simply means that the VCS will forever record the state of the file at the time of the commit, with a commit message to briefly describe such state and an open possibility to restore it in the future.
 
-The video below shows the previous steps in action. First, a file is created with using the Linux command `touch` (you can create the file manually if you do not use a Linux computer). Subsequently, calling `git status` shows that the file exists but is not inside the tracking list. Therefore, the file is added to the tracking list using `git add` and finally, the creation of that file is committed with a corresponding message.
+The video below shows the previous steps in action. First, a file is created using the Linux command `touch` (you can create the file manually if you do not use a Linux computer). Subsequently, calling `git status` shows that the file exists but is not inside the tracking list. Therefore, the file is added to the tracking list using `git add` and finally, the creation of that file is committed with a corresponding message.
 
 [Print Git status, add to tracking list and commit](https://github.com/user-attachments/assets/b7c1ce30-e638-44db-adb6-72b630f57b7c)
 
